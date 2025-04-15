@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    run: mypod
+spec:
+  containers:
+  - image: athukral1/simple-node-app
+    name: simple-node-app
+    ports:
+    - containerPort: 3000
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
